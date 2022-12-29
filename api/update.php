@@ -29,4 +29,3 @@
     } else{
         echo json_encode("Data could not be updated");
     }
-?>
