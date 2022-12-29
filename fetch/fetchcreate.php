@@ -29,7 +29,6 @@
             fetch('http://localhost/restful-php/api/create.php',options)
                 .then((response) => response.json())
                 .then((data) => console.log(data));
-            console.log(JSON.stringify(jsonData));
         }
 
         createApi();
