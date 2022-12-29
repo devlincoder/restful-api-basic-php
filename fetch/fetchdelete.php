@@ -12,7 +12,12 @@
     <script>
         function deleteApi() {
             const jsonData = {
-                id:2
+                id: <?php
+                    if (isset($_GET["id"])) {
+                        $id = $_GET["id"];
+                    }
+                    echo $id;
+                    ?>
             }
             var options = {
                 method: 'DELETE',
@@ -22,7 +27,7 @@
                 body: JSON.stringify(jsonData)
             }
 
-            fetch('http://localhost/restful-php/api/delete.php',options)
+            fetch('http://localhost/restful-php/api/delete.php', options)
                 .then((response) => response.json())
                 .then((data) => console.log(data));
         }
@@ -33,3 +38,4 @@
 </body>
 
 </html>
+
